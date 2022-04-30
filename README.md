@@ -3,8 +3,8 @@
 Read a web page by URL and find there all of linkable attributes.
 
 ## Table of contents
-1. [Task description](#Task description)
-2. [Additional tasks](#Additional tasks)
+1. [Task description](#task-description)
+2. [Additional tasks](#additional-tasks)
 3. [Usage](#Usage)
 
 ## Task description
@@ -55,6 +55,16 @@ Output (example):
 ## Additional tasks
 * Add testing
 * Save locally statics of &lt;script/img/link&gt; (css,js,jpeg,png,jpg,…)
+
+## Requirements
+simplehtmldom requires PHP 5.6 or higher with ext-iconv enabled. Following extensions enable additional features of the parser:
+
+ext-mbstring (recommended)
+Enables better detection for multi-byte documents.
+ext-curl
+Enables cURL support for the class HtmlWeb.
+ext-openssl (recommended when using cURL)
+Enables SSL support for cURL.
 
 ## Usage
 
