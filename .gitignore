@@ -2,3 +2,4 @@
 /vendor/
 /downloads/
 /temp/
+/composer.lock
