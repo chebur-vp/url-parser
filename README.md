@@ -1,5 +1,5 @@
 # CLI Web parser
-
+[<sup>1</sup>](#wrong-arguments)
 Read a web page by URL and find there all of linkable attributes.
 
 ## Table of contents
@@ -9,25 +9,19 @@ Read a web page by URL and find there all of linkable attributes.
 
 ## Task description
 
-Use URL as input parameter of the script.
-
+Use URL as input parameter of the script.  
 The script must find content of all attributes **href/src** for the following tags:
-
 * &lt;а href&gt; _links_
 * &lt;img href&gt; _images_
 * &lt;script src&gt; _scripts_
 * &lt;link href&gt; _styles_
 
-The output is JSON file, where each tag will contain a list of all founded values.
-
-Empty values must not be included in lists.
-
-Script must be run from command line.
-
+The output is JSON file, where each tag will contain a list of all founded values.  
+Empty values must not be included in lists.  
+Script must be run from command line.  
 Thus project must be placed in GIT repository.
   
-Input (example):
-
+Input (example):  
 `php index.php https://www.php.net/manual/en/pdo.drivers.php`
 
 Output (example):
@@ -47,7 +41,7 @@ Output (example):
   ],
   "link": [
     "https://www.php.net/favicon.ico",
-    "http://php.net/phpnetimprovedsearch.src",
+    "https://php.net/phpnetimprovedsearch.src",
   ]
 }
 ```
@@ -57,20 +51,19 @@ Output (example):
 * Save locally statics of &lt;script/img/link&gt; (css,js,jpeg,png,jpg,…)
 
 ## Requirements
-simplehtmldom requires PHP 5.6 or higher with ext-iconv enabled. Following extensions enable additional features of the parser:
-
-ext-mbstring (recommended)
-Enables better detection for multi-byte documents.
-ext-curl
-Enables cURL support for the class HtmlWeb.
-ext-openssl (recommended when using cURL)
-Enables SSL support for cURL.
+* PHP 8.1
+* ext-curl
+* ext-dom
+* ext-libxml 
 
 ## Usage
 
-`php index.php <URL of web page to analyse>` [wrong-args-count]
+`php index.php <URL of web page to analyse>`    
+or  
+`php index.php --test <path to the test HTML file>`
 
-[wrong-args-count]: If the argument is omitted or count of arguments is more than one, script will be interrupted with an exception.
+<sup><a id="wrong-arguments">1</a></sup> If the argument is omitted or count of arguments is more than one, script will be interrupted with an exception.
+
 
 
 
