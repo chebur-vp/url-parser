@@ -14,7 +14,11 @@ class Debug
         'notice' => '1;30',
     ];
 
-    private static function makeEscSequence(string $color)
+    /**
+     * @param string $color
+     * @return string
+     */
+    private static function makeEscSequence(string $color): string
     {
         return self::ESC . '[' . self::$styles[$color] . 'm';
     }
@@ -41,7 +45,12 @@ class Debug
         }
     }
 
-    private static function message($text, $method = 'info')
+    /**
+     * @param $text
+     * @param $method
+     * @return void
+     */
+    private static function message($text, $method = 'info'): void
     {
         echo self::makeEscSequence($method) . $text . self::makeEscSequence('reset') . PHP_EOL;
     }
