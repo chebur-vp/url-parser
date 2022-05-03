@@ -1,6 +1,6 @@
 # CLI Web parser
-[<sup>1</sup>](#wrong-arguments)
-Read a web page by URL and find there all of linkable attributes.
+
+Read a web page by URL and find there all of linkable attributes. [<sup>1</sup>](#wrong-arguments)
 
 ## Table of contents
 1. [Task description](#task-description)
